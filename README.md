@@ -63,3 +63,8 @@ you're running a local Deno script or if you're using Node.
 
 As a result, you can focus on building an intuitive scaffolding tool for Deno
 and Node, and let `skaffe` do the nasty part.
+
+## What's in a Name?
+
+The word _skaffe_ is Norwegian and means _provide_.
+It also looks similar to the prefix of _scaffolding_.
