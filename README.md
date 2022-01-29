@@ -3,6 +3,15 @@
 This library provides a simple way to copy around files that were shipped with
 your hybrid Deno/Node scaffolding CLI.
 
+You can easily try this library from Deno.
+
+```shellscript
+deno run -A https://raw.githubusercontent.com/KnorpelSenf/skaffe/main/example.ts
+```
+
+This will demo the scaffolding by copying the example file itself into the
+current working directory.
+
 ## Deno Example
 
 Use the following code.
