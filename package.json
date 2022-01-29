@@ -1,17 +1,27 @@
 {
   "name": "skaffe",
   "description": "Building block for Deno+Node scaffolding tools",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "KnorpelSenf",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/KnorpelSenf/skaffe"
   },
-  "scripts": { "build": "deno2node tsconfig.json" },
-  "devDependencies": { "@types/node": "^17.0.13", "deno2node": "^1.1.0" },
-  "files": ["out/"],
+  "scripts": {
+    "build": "deno2node tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "deno2node": "^1.1.0"
+  },
+  "files": [
+    "out/"
+  ],
   "main": "./out/mod.js",
   "types": "./out/mod.d.ts",
-  "keywords": ["deno", "scaffolding"]
+  "keywords": [
+    "deno",
+    "scaffolding"
+  ]
 }
