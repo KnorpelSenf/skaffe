@@ -8,11 +8,10 @@ export async function scaffold(source: string | URL, target: string) {
 export async function getFile(
   source: string | URL,
 ): Promise<AsyncIterable<Uint8Array>> {
-  if (typeof source === "string") source = new URL(source);
   const resource = await fetch(source);
   const data = resource.body;
   if (data === null) {
-    throw new Error(`Resource at ${source.href} could not be accessed!`);
+    throw new Error(`Resource at ${source} could not be accessed!`);
   }
   return data;
 }
