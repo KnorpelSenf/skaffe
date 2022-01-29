@@ -17,7 +17,7 @@ current working directory.
 Use the following code.
 
 ```ts
-import { scaffold } from "https://deno.land/x/skaffe@1.0.0/mod.ts";
+import { scaffold } from "https://deno.land/x/skaffe@v1.0.0/mod.ts";
 import { join } from "https://deno.land/std@0.123.0/path/mod.ts";
 
 const thisFile = import.meta.url;
