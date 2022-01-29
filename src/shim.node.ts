@@ -9,6 +9,5 @@ export function fetch(source: string | URL): Promise<FetchResult> {
     throw new Error("Can only read local files!");
   }
   const body = createReadStream(source, { encoding: "utf8" });
-  console.log("body", body);
   return Promise.resolve({ body });
 }
