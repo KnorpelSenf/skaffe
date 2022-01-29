@@ -45,7 +45,7 @@ const thisFile = __filename;
 const targetFile = join(process.cwd(), "target-file.js");
 
 // Will copy this very source file into the working directory
-await scaffold(thisFile, targetFile);
+scaffold(thisFile, targetFile);
 ```
 
 ## Why?
