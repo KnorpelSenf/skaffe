@@ -1,0 +1,16 @@
+{
+  "name": "skaffe",
+  "description": "Building block for Deno+Node scaffolding tools",
+  "version": "0.1.0",
+  "main": "out/mod.js",
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "deno2node": "^1.1.0"
+  },
+  "scripts": {
+    "build": "deno2node tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
