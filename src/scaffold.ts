@@ -1,4 +1,4 @@
-import { basename, join, stat, writeData } from "./platform.deno.ts";
+import { basename, isDirectory, join, writeData } from "./platform.deno.ts";
 
 export async function scaffold(source: string | URL, target: string) {
   const file = await toFile(source, target);
@@ -24,8 +24,7 @@ export async function toFile(
   let result = targetDirectoryOrFile;
   try {
     // If the given target is an existing directory ...
-    const { isDirectory } = await stat(targetDirectoryOrFile);
-    if (isDirectory) {
+    if (await isDirectory(targetDirectoryOrFile)) {
       // ... use the source file name in the directory.
       const path = typeof sourceFile === "string"
         ? sourceFile

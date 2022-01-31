@@ -1,8 +1,10 @@
 import { createWriteStream } from "fs";
 import { Readable } from "stream";
+import { lstat } from "fs/promises";
 
-export { lstat as stat } from "fs";
 export { basename, join } from "path";
+export const isDirectory = (path: string) =>
+  lstat(path).then((info) => info.isDirectory());
 
 export async function writeData(
   target: string,
