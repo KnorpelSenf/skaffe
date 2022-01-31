@@ -1,6 +1,9 @@
 import { createWriteStream } from "fs";
 import { Readable } from "stream";
 
+export { lstat as stat } from "fs";
+export { basename, join } from "path";
+
 export async function writeData(
   target: string,
   data: AsyncIterable<Uint8Array>,

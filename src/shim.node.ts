@@ -1,4 +1,6 @@
 import { createReadStream } from "fs";
+import { URL } from "url";
+export { URL };
 
 interface FetchResult {
   body: AsyncIterable<Uint8Array>;

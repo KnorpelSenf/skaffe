@@ -3,6 +3,9 @@ import {
   readerFromIterable,
 } from "https://deno.land/std@0.123.0/streams/mod.ts";
 
+export const { stat } = Deno;
+export { basename, join } from "https://deno.land/std@0.123.0/path/mod.ts";
+
 export async function writeData(
   target: string,
   data: AsyncIterable<Uint8Array>,
