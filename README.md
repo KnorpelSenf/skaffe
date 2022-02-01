@@ -18,13 +18,12 @@ Use the following code.
 
 ```ts
 import { scaffold } from "https://deno.land/x/skaffe@v1.0.0/mod.ts";
-import { join } from "https://deno.land/std@0.123.0/path/mod.ts";
 
 const thisFile = import.meta.url;
-const targetFile = join(Deno.cwd(), "target-file.ts");
+const targetDirectory = Deno.cwd(); // using a dir will infer the file name
 
 // Will copy this very source file into the working directory
-await scaffold(thisFile, targetFile);
+await scaffold(thisFile, targetDirectory);
 ```
 
 ## Node Example
@@ -39,13 +38,12 @@ and use the following code.
 
 ```ts
 const { scaffold } = require("skaffe");
-const { join } = require("path");
 
 const thisFile = __filename;
-const targetFile = join(process.cwd(), "target-file.js");
+const targetDirectory = process.cwd(); // using a dir will infer the file name
 
 // Will copy this very source file into the working directory
-scaffold(thisFile, targetFile);
+scaffold(thisFile, targetDirectory);
 ```
 
 ## Why?
@@ -66,5 +64,5 @@ and Node, and let `skaffe` do the nasty part.
 
 ## What's in a Name?
 
-The word _skaffe_ is Norwegian and means _provide_.
-It also looks similar to the prefix of _scaffolding_.
+The word _skaffe_ is Norwegian and means _provide_. It also looks similar to the
+prefix of _scaffolding_.
